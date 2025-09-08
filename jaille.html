@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invite for Mike</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .no {
+      background-color: #f44336;
+      color: white;
+    }
+    #response {
+      margin-top: 20px;
+    }
+    #response img {
+      margin-top: 10px;
+      border-radius: 12px;
+    }
+    #nextBtn {
+      margin-top: 20px;
+      background-color: #2196F3;
+      color: white;
+      display: none; /* hidden at first */
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi Jaille 🎉</h1>
+  <p>You're invited on my birthday HAHA!</p>
+
+  <!-- Gift Question -->
+  <p>Do you have some gift to give to me? haha 😜</p>
+  <button class="yes" onclick="sayYes()">Yes</button>
+  <button class="no" onclick="sayNo()">No</button>
+
+  <div id="response"></div>
+  <button id="nextBtn" onclick="goNext()">Next ➡️</button>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerHTML = "<p>Yay! Can't wait 🎁</p>";
+      document.getElementById("nextBtn").style.display = "inline-block";
+    }
+
+    function sayNo() {
+      document.getElementById("response").innerHTML = `
+        <p>Why not? 😢</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXVyNjk2d3NndDE4N2EwOG1rZnU0eWViZzk0cGdqNzkzbm53czBrNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oJvNuFioFPhKSNXwI6/giphy.gif" 
+             alt="Sad GIF" width="250">
+      `;
+      document.getElementById("nextBtn").style.display = "inline-block";
+    }
+
+    function goNext() {
+      window.location.href = "birthday.html"; // Redirect to birthday page
+    }
+  </script>
+</body>
+</html>

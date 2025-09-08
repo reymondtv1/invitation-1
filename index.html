@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reymond's Birthday Invite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    img {
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff3b2f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Birthday GIF -->
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWV5YjBsc3I1aHp5bzhsOWVlcjVnODNvbmxxa2k3eTF6bGdnNzd0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H3NF3JvE1mOsOXb8l3/giphy.gif" 
+       alt="Birthday GIF" 
+       width="250">
+
+  <h1>Hi, You're invited on my laag HAHA 🎉</h1>
+  <p>Enter your code below:</p>
+  <input type="text" id="codeInput" placeholder="Enter your code">
+  <button onclick="checkCode()">Submit</button>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById("codeInput").value.trim();
+
+      // Add more codes and pages here
+      const codes = {
+  "5346": "novy.html",
+  "8291": "jeddea.html",
+  "4720": "rhea.html",
+  "9153": "jadean.html",
+  "1234": "mike.html",
+  "4321": "jaille.html",
+  "6815": "jd.html"
+};
+      if (codes[code]) {
+        window.location.href = codes[code];
+      } else {
+        alert("Invalid code! Dili ka invited kay sayup HAHA.");
+      }
+    }
+  </script>
+</body>
+</html>
